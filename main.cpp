@@ -1,48 +1,36 @@
 #include <iostream> 
 #include <raylib.h>
-
+#include "class/Snake/Snake.h"
 
 const int screenWidth = 900;
 const int screenHeight = 900;
 
-
-void draw_center_lines();
+void draw_grid();
 
 int main() {
 
     InitWindow(screenWidth, screenHeight, "Snake");
 
-     while(!WindowShouldClose()) {
+    while(!WindowShouldClose()) {
         BeginDrawing();
 
         ClearBackground(BLACK);
 
-        draw_center_lines();
+        draw_grid();
+
 
         EndDrawing();
     }
 
     CloseWindow();
-    
+
     return 0;
 }
 
-
-// to help with positioning / centering of objects
-void draw_center_lines() {
-    DrawLine(
-        0, // x start pos
-        screenHeight/2, // y start pos
-        screenWidth, //x end pos
-        screenHeight/2, // y end pos
-        WHITE
-    );
-
-    DrawLine(
-        screenWidth/2, // x start pos
-        0, // y start pos
-        screenWidth/2, //x end pos
-        screenHeight, // y end pos
-        WHITE
-    );
+void draw_grid() {
+    for (int i = 0; i < 30; i++) {
+        for (int j = 0; j < 30; j++) {
+            DrawRectangleLines(i * 30, j * 30, 30, 30, WHITE);
+        }
+    }
 }
