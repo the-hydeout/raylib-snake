@@ -1,13 +1,23 @@
 #ifndef SNAKE_H
 #define SNAKE_H
-
+#include <raylib.h>
 #include <string>
 
 class Snake {
     private:
-        std::string snake_eat_string = "Snake eat string";
+        Rectangle snake_cell {
+            0.0f,
+            0.0f,
+            30.0f,
+            30.0f,
+        };
+        int snake_length {1};
+        int snake_pos_x {1};
+        int snake_pos_y {3};
+
     public:
-        void snake_eat();
+        void draw_snake();
+        void move_snake();
 };
 
 #endif

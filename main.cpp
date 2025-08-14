@@ -11,11 +11,19 @@ int main() {
 
     InitWindow(screenWidth, screenHeight, "Snake");
 
+    Snake player_snake;
+
+    SetTargetFPS(8);
 
     while(!WindowShouldClose()) {
         BeginDrawing();
 
         ClearBackground(BLACK);
+
+        player_snake.draw_snake();
+        player_snake.move_snake();
+
+        
 
         draw_grid();
 
