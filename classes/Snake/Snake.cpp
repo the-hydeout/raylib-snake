@@ -12,5 +12,14 @@ void Snake::draw_snake() {
 }
 
 void Snake::move_snake() {
-    snake_pos_x += 1;
+    if(IsKeyDown(KEY_DOWN)) {
+        snake_pos_y += 1;
+    } else if (IsKeyDown(KEY_UP)) {
+        snake_pos_y -= 1;
+    } else if (IsKeyDown(KEY_LEFT)) {
+        snake_pos_x -= 1;
+    } else if (IsKeyDown(KEY_RIGHT)) {
+        snake_pos_x += 1;
+    }
+    
 }
