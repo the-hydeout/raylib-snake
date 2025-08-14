@@ -1,3 +1,3 @@
-build/main.o: main.cpp include/raylib.h class/Snake/Snake.h
+build/main.o: main.cpp include/raylib.h classes/Snake/Snake.h
 include/raylib.h:
-class/Snake/Snake.h:
+classes/Snake/Snake.h:

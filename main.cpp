@@ -1,6 +1,6 @@
 #include <iostream> 
 #include <raylib.h>
-#include "class/Snake/Snake.h"
+#include "classes/Snake/Snake.h"
 
 const int screenWidth = 900;
 const int screenHeight = 900;
@@ -10,6 +10,7 @@ void draw_grid();
 int main() {
 
     InitWindow(screenWidth, screenHeight, "Snake");
+
 
     while(!WindowShouldClose()) {
         BeginDrawing();
