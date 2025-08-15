@@ -1,6 +1,7 @@
 #include <iostream> 
 #include <raylib.h>
 #include "classes/Snake/Snake.h"
+#include <chrono>
 
 const int screenWidth = 900;
 const int screenHeight = 900;
@@ -13,15 +14,26 @@ int main() {
 
     Snake player_snake;
 
-    SetTargetFPS(8);
-
+    SetTargetFPS(60);
+    
+    float timer = 0.0f;
+    float interval = .2f;
+    
     while(!WindowShouldClose()) {
         BeginDrawing();
 
         ClearBackground(BLACK);
 
+        timer += GetFrameTime();
+
+        if(timer >= interval) {
+            std::cout << "BOOM" << std::endl;
+            timer = 0;
+        }
+
         player_snake.draw_snake();
         player_snake.move_snake();
+        player_snake.set_snake_direction();
 
         
 
