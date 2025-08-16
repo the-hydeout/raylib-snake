@@ -11,16 +11,17 @@ class Snake {
             30.0f,
             30.0f,
         };
-        int snake_length {1};
-        int snake_pos_x {1};
-        int snake_pos_y {3};
-        KeyboardKey key_pressed {KEY_DOWN};
+        int snake_length { 1 };
+        int snake_pos_x { 1 };
+        int snake_pos_y { 3 };
+        KeyboardKey key_pressed { KEY_DOWN };
 
     public:
         void draw_snake();
         void move_snake();
         KeyboardKey get_snake_direction();
         void set_snake_direction();
+        Rectangle get_snake_cell();
 };
 
 #endif
