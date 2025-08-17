@@ -5,8 +5,7 @@ void Snake::draw_snake() {
         DrawRectanglePro
         (
             snake_cell, 
-            // { -static_cast<float>(snake_pos_x * 30), -static_cast<float>(snake_pos_y * 30)}, 
-            {0, 0}, 
+            { -static_cast<float>(snake_pos_x * 30), -static_cast<float>(snake_pos_y * 30)}, 
             0.0f, 
             WHITE
         );

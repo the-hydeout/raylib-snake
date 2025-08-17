@@ -1,7 +1,7 @@
 #include <iostream> 
 #include <raylib.h>
 #include "classes/Snake/Snake.h"
-#include "classes/SnakeFood/SnakeFood.h"
+// #include "classes/SnakeFood/SnakeFood.h"
 #include <chrono>
 
 const int screenWidth = 900;
@@ -15,7 +15,7 @@ int main() {
 
     Snake player_snake;
     
-    SnakeFood player_food;
+    // SnakeFood player_food;
 
     SetTargetFPS(30);
     
@@ -30,7 +30,6 @@ int main() {
         timer += GetFrameTime();
 
         if(timer >= interval) {
-            // std::cout << "BOOM" << std::endl;
             timer = 0;
         }
 
@@ -38,11 +37,8 @@ int main() {
         player_snake.move_snake();
         player_snake.set_snake_direction();
         
-        player_food.draw_snake_food();
-        // player_food.is_food_eaten();
-        player_food.has_collided_with_snake(player_snake.get_snake_cell(), player_food.get_food_cell());
-        std::cout << player_snake.get_snake_cell().x << std::endl;
-        std::cout << player_snake.get_snake_cell().y << std::endl;
+        // player_food.draw_snake_food();
+        // player_food.has_collided_with_snake(player_snake.get_snake_cell(), player_food.get_food_cell());
 
         
 

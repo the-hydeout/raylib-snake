@@ -22,6 +22,10 @@ class Snake {
         KeyboardKey get_snake_direction();
         void set_snake_direction();
         Rectangle get_snake_cell();
+
+        // Vector2 get_snake_position() {
+        //     return {static_cast<float>(snake_pos_x), static_cast<float>(snake_pos_y)};
+        // };
 };
 
 #endif
